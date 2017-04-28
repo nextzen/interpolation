@@ -1,4 +1,6 @@
-sudo: false
+sudo: required
+services:
+  - docker
 dist: trusty
 language: node_js
 notifications:
@@ -8,15 +10,8 @@ node_js:
   - 6
 matrix:
   fast_finish: true
-script: npm run travis
-addons:
-  apt:
-    packages:
-      - gdal-bin
-      - proj-bin
-before_install:
-  - npm i -g npm@^3.0.0
-before_script:
-  - npm prune
+script:
+  - docker build -t pelias/interpolation .
+  - docker run pelias/interpolation npm run travis
 after_success:
-  - npm run semantic-release
+  - docker run pelias/interpolation npm run semantic-release
