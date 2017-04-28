@@ -60,11 +60,13 @@ RUN apt-get update && apt-get install -y python sqlite3 gdal-bin
 RUN mkdir -p /usr/src/repos/interpolation
 WORKDIR /usr/src/repos/interpolation
 
-# copy source code
-COPY . /usr/src/repos/interpolation
+COPY package.json /usr/src/repos/interpolation
 
 # Install app dependencies
 RUN npm install
+
+# copy source code
+COPY . /usr/src/repos/interpolation
 
 # run tests
 RUN npm test
