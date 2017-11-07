@@ -1,11 +1,11 @@
+# Pelias Interpolation
 
-An open source + open data project to perform global street address interpolation queries. Sponsored by [mapzen](http://www.mapzen.com).
+
+An open source + open data project to perform global street address interpolation queries. Sponsored by [Mapzen](http://www.mapzen.com).
 
 ![header](http://missinglink.embed.s3.amazonaws.com/interpolation-title.png)
 
 # About
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/pelias/interpolation.svg)](https://greenkeeper.io/)
 
 The [Openstreetmap](http://www.openstreetmap.com) and [Openaddresses](http://www.openaddresses.com) projects provide a huge cache of street address information; between them around 500 million address points are freely available to download.
 
